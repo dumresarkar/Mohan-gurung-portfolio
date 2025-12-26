@@ -1,10 +1,3 @@
-/**
-* Template Name: MyPage
-* Template URL: https://bootstrapmade.com/mypage-bootstrap-personal-template/
-* Updated: Sep 20 2025 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 (function() {
   "use strict";
