@@ -20,8 +20,6 @@ Web: HTML, CSS, JavaScript
 Other: Problem solving, teamwork, communication
 
 
-(Replace each line with your real project names, technologies used, and main features.)
-
 Contact dumresarkaar @
 Email: dumresabin@gmail.com
 
