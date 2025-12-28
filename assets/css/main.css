@@ -7,30 +7,30 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+/* :root { 
   --background-color: #25303f; 
   --default-color: #f3f4f6; 
   --heading-color: #f9fafb; 
   --accent-color: #22e7a1; 
   --surface-color: #293443; 
   --contrast-color: #1f2937;
-}
+} */
 
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
+/* :root {
   --nav-color: #f3f4f6;  
   --nav-hover-color: #22e7a1; 
   --nav-mobile-background-color: #38485f; 
   --nav-dropdown-background-color: #38485f; 
   --nav-dropdown-color: #f3f4f6; 
   --nav-dropdown-hover-color: #22e7a1; 
-}
+} */
 
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
+/* .light-background {
   --background-color: #293341;
   --surface-color: #4b607f;
 }
@@ -41,7 +41,41 @@
   --heading-color: #ffffff;
   --surface-color: #151f2b;
   --contrast-color: #ffffff;
+} */
+/* Global Colors - Soft Earth Theme */
+:root { 
+  --background-color: #faf8f3;        /* Warm sand */
+  --default-color: #5b5a55;           /* Warm gray text */
+  --heading-color: #3f3d37;           /* Earth dark headings */
+  --accent-color: #c7a56b;            /* Soft gold accent */
+  --surface-color: #ffffff;           /* Cards / sections */
+  --contrast-color: #ece6d9;           /* Soft dividers */
 }
+
+:root {
+  --nav-color: #3f3d37;  
+  --nav-hover-color: #c7a56b; 
+  --nav-mobile-background-color: #f3efe5; 
+  --nav-dropdown-background-color: #ffffff; 
+  --nav-dropdown-color: #3f3d37; 
+  --nav-dropdown-hover-color: #c7a56b; 
+}
+
+/* Light soft background section */
+.light-background {
+  --background-color: #f5f1e8;
+  --surface-color: #ffffff;
+}
+
+/* Soft dark section (still warm, not harsh) */
+.dark-background {
+  --background-color: #e9e2d3;
+  --default-color: #4a473f;
+  --heading-color: #2f2d28;
+  --surface-color: #ffffff;
+  --contrast-color: #d8cfbc;
+}
+
 
 
 /* Smooth scroll */

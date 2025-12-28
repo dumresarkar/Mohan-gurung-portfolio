@@ -23,7 +23,30 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script>
+  const toggleBtn = document.getElementById("themeToggle");
+  const themes = ["light", "dark", "pastel"];
+  let currentTheme = localStorage.getItem("theme") || "light";
 
+  applyTheme(currentTheme);
+
+  toggleBtn.addEventListener("click", () => {
+    let index = themes.indexOf(currentTheme);
+    currentTheme = themes[(index + 1) % themes.length];
+    applyTheme(currentTheme);
+  });
+
+  function applyTheme(theme) {
+    if (theme === "light") {
+      document.documentElement.removeAttribute("data-theme");
+      toggleBtn.textContent = "🌙";
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+      toggleBtn.textContent = theme === "dark" ? "🌸" : "☀️";
+    }
+    localStorage.setItem("theme", theme);
+  }
+</script>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
