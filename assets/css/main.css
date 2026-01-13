@@ -6,81 +6,151 @@
   --nav-font: "Raleway",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-/* :root { 
-  --background-color: #25303f; 
-  --default-color: #f3f4f6; 
-  --heading-color: #f9fafb; 
-  --accent-color: #22e7a1; 
-  --surface-color: #293443; 
-  --contrast-color: #1f2937;
-} */
-
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 /* :root {
-  --nav-color: #f3f4f6;  
-  --nav-hover-color: #22e7a1; 
-  --nav-mobile-background-color: #38485f; 
-  --nav-dropdown-background-color: #38485f; 
-  --nav-dropdown-color: #f3f4f6; 
-  --nav-dropdown-hover-color: #22e7a1; 
-} */
+  --background-color: #fbfbf9;
+  --default-color: #3e4348;
+  --heading-color: #121417;
+  --accent-color: #b85c38; 
+  --surface-color: #ffffff;
+  --contrast-color: #e5e7eb;
 
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-/* .light-background {
-  --background-color: #293341;
-  --surface-color: #4b607f;
+  --nav-color: #121417;
+  --nav-hover-color: #b85c38;
+  --nav-mobile-background-color: #f3f4f6;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #121417;
+  --nav-dropdown-hover-color: #b85c38;
 }
 
-.dark-background {
-  --background-color: #1c2737;
-  --default-color: #ffffff;
+[data-theme="dark"] {
+  --background-color: #0f1115;
+  --default-color: #c9cdd4;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
-} */
-/* Global Colors - Soft Earth Theme */
-:root { 
-  --background-color: #faf8f3;        /* Warm sand */
-  --default-color: #5b5a55;           /* Warm gray text */
-  --heading-color: #3f3d37;           /* Earth dark headings */
-  --accent-color: #c7a56b;            /* Soft gold accent */
-  --surface-color: #ffffff;           /* Cards / sections */
-  --contrast-color: #ece6d9;           /* Soft dividers */
+  --accent-color: #d97757;
+  --surface-color: #161a20;
+  --contrast-color: #2a2f38;
+
+  --nav-color: #ffffff;
+  --nav-hover-color: #d97757;
+  --nav-mobile-background-color: #161a20;
+  --nav-dropdown-background-color: #161a20;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #d97757;
 }
+[data-theme="pastel"] {
+  --background-color: #fdf6f8;
+  --default-color: #4b4f55;
+  --heading-color: #1f2328;
+  --accent-color: #d16c7c;
+  --surface-color: #ffffff;
+  --contrast-color: #efdde2;
+
+  --nav-color: #1f2328;
+  --nav-hover-color: #d16c7c;
+  --nav-mobile-background-color: #f7eef1;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #1f2328;
+  --nav-dropdown-hover-color: #d16c7c;
+} */
 
 :root {
-  --nav-color: #3f3d37;  
-  --nav-hover-color: #c7a56b; 
-  --nav-mobile-background-color: #f3efe5; 
-  --nav-dropdown-background-color: #ffffff; 
-  --nav-dropdown-color: #3f3d37; 
-  --nav-dropdown-hover-color: #c7a56b; 
+  --background-color: #ffffff;      /* pure white */
+  --default-color: #1f2937;         /* dark slate text */
+  --heading-color: #000000;         /* true black headings */
+  --accent-color: #003cff;          /* signal blue (very visible) */
+  --surface-color: #f9fafb;         /* card background */
+  --contrast-color: #cbd5e1;         /* strong dividers */
+
+  --nav-color: #000000;
+  --nav-hover-color: #003cff;
+  --nav-mobile-background-color: #f1f5f9;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #000000;
+  --nav-dropdown-hover-color: #003cff;
 }
 
-/* Light soft background section */
-.light-background {
-  --background-color: #f5f1e8;
+[data-theme="dark"] {
+  --background-color: #000000;
+  --default-color: #e5e7eb;         /* light gray text */
+  --heading-color: #ffffff;
+  --accent-color: #4d7cff;          /* brighter blue for dark bg */
+  --surface-color: #111827;
+  --contrast-color: #374151;
+
+  --nav-color: #ffffff;
+  --nav-hover-color: #4d7cff;
+  --nav-mobile-background-color: #111827;
+  --nav-dropdown-background-color: #111827;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #4d7cff;
+}
+[data-theme="pastel"] {
+  --background-color: #f8fafc;
+  --default-color: #1f2937;
+  --heading-color: #020617;
+  --accent-color: #2563eb;          /* accessible blue */
   --surface-color: #ffffff;
+  --contrast-color: #dbeafe;
+
+  --nav-color: #020617;
+  --nav-hover-color: #2563eb;
+  --nav-mobile-background-color: #eff6ff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #020617;
+  --nav-dropdown-hover-color: #2563eb;
 }
 
-/* Soft dark section (still warm, not harsh) */
-.dark-background {
-  --background-color: #e9e2d3;
-  --default-color: #4a473f;
-  --heading-color: #2f2d28;
-  --surface-color: #ffffff;
-  --contrast-color: #d8cfbc;
+.theme-toggle {
+  background: var(--surface-color);
+  color: var(--heading-color);
+  border: 1px solid var(--contrast-color);
+  padding:5px;
+  margin: 5px;
+  border-radius: 50px;
+  cursor: pointer;
 }
-
-
-
+a {
+  color: var(--accent-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.btn {
+  background: var(--accent-color) !important;
+  color: #ffffff !important;
+}
+:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+
+
+.shineeff {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 /*--------------------------------------------------------------
