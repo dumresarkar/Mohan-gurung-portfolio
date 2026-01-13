@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
   <header id="header" class="header dark-background d-flex flex-column justify-content-between">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <div class="header-top">
-      <div class="profile-img">
+      <div class="profile-img position-relative">
         <img src="assets/img/person/mohan-grg-1.jpg" alt="" class="img-fluid">
       </div>
       <a href="index.html" class="logo d-flex align-items-center justify-content-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">Mohan Gurung</h1>
-        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <a id="themeToggle" class="theme-toggle position-absolute"  style="font-size: xx-large;top: 280px;right: 32px;">🌙</button>
 
       </a>
     </div>
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </header>
 
-  <main class="main">
+  <main class="main p-3">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="container p-0" data-aos="fade-up" data-aos-delay="100">
@@ -112,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="accent-text">Visual Storyteller</span>
               </h1> -->
               <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-                “मेडिया प्रोफेसनल, भिजुअल स्टोरीटेलर तथा एमफिल–पिएचडी रिसर्च स्कलर, जो भाषाविज्ञानको गहिरो बुझाइ र सिर्जनशील दृष्टिकोणलाई जोडेर दैनन्दिन जीवन, नीति र संस्कृतिका कथाहरूलाई प्रभावशाली मल्टिमिडिया सामग्रीमा रूपान्तरण गर्छन्, जसले दर्शकलाई छोइदिन्छ, संवाद जगाउँछ र लामो समयसम्म सम्झनामा बसिरहन्छ।”
+                “मेडिया प्रोफेसनल, भिजुअल स्टोरीटेलर तथा एमफिल–पिएचडी रिसर्च स्कलर, जो भाषाविज्ञानको 
+                गहिरो बुझाइ र सिर्जनशील दृष्टिकोणलाई जोडेर दैनन्दिन जीवन, नीति र संस्कृतिका कथाहरूलाई प्रभावशाली मल्टिमिडिया सामग्रीमा रूपान्तरण गर्छन्, जसले दर्शकलाई छोइदिन्छ, संवाद जगाउँछ र लामो समयसम्म सम्झनामा बसिरहन्छ।”
               </p>
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
                 <a href="#portfolio" class="btn-primary">View My Work</a>
@@ -450,8 +451,13 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row align-items-start">
 
-      <!-- Professional Experience Section -->
-      <section id="experience" class="row" aria-labelledby="experience-title" data-aos="fade-right" data-aos-delay="200">
+      
+    </div>
+  </div>
+</section>
+<section  id="experience" class="experienceducation section" >
+<!-- Professional Experience Section -->
+      <div class="row" aria-labelledby="experience-title" data-aos="fade-right" data-aos-delay="200">
         <div class="professional-journey">
           <div class="section-intro">
             <!-- <div class="icon-wrapper">
@@ -601,10 +607,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           </div>
         </div>
-      </section>
-
-      <!-- Education & Qualifications Section -->
-      <section id="education"
+      </div>
+</section>
+      
+<section id="education" class="experienceducation section">
+<!-- Education & Qualifications Section -->
+      <div 
                class="row"
                aria-labelledby="education-title" data-aos="fade-left" data-aos-delay="200">
         <div class="education-skills">
@@ -731,9 +739,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           </div>
         </div>
-      </section>
-    </div>
-  </div>
+      </div>
 </section>
 
 <!-- Portfolio Section -->

@@ -1725,13 +1725,13 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section
+# experienceducation Section
 --------------------------------------------------------------*/
-.resume .section-intro {
+.experienceducation .section-intro {
   margin-bottom: 3rem;
 }
 
-.resume .section-intro .icon-wrapper {
+.experienceducation .section-intro .icon-wrapper {
   width: 60px;
   height: 60px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -1742,12 +1742,12 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.resume .section-intro .icon-wrapper i {
+.experienceducation .section-intro .icon-wrapper i {
   font-size: 1.5rem;
   color: var(--accent-color);
 }
 
-.resume .section-intro h2 {
+.experienceducation .section-intro h2 {
   font-size: 2rem;
   font-weight: 300;
   color: var(--heading-color);
@@ -1755,19 +1755,19 @@ section,
   letter-spacing: -0.02em;
 }
 
-.resume .section-intro p {
+.experienceducation .section-intro p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
 }
 
-.resume .professional-journey .experience-timeline {
+.experienceducation .professional-journey .experience-timeline {
   position: relative;
   padding-left: 2rem;
 }
 
-.resume .professional-journey .experience-timeline::before {
+.experienceducation .professional-journey .experience-timeline::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1777,16 +1777,16 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.resume .professional-journey .experience-timeline .timeline-item {
+.experienceducation .professional-journey .experience-timeline .timeline-item {
   position: relative;
   margin-bottom: 3rem;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item:last-child {
+.experienceducation .professional-journey .experience-timeline .timeline-item:last-child {
   margin-bottom: 0;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-dot {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-dot {
   position: absolute;
   left: -2.3rem;
   top: 0.5rem;
@@ -1798,11 +1798,11 @@ section,
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content .position-meta {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content .position-meta {
   margin-bottom: 0.5rem;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content .position-meta .timeline-year {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content .position-meta .timeline-year {
   font-size: 0.9rem;
   color: var(--accent-color);
   font-weight: 500;
@@ -1810,7 +1810,7 @@ section,
   text-transform: uppercase;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content h3 {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content h3 {
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--heading-color);
@@ -1818,27 +1818,27 @@ section,
   letter-spacing: -0.01em;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content h4 {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content h4 {
   font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content p {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content p {
   font-size: 1rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 1.5rem;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.resume .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements .achievement-tag {
+.experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements .achievement-tag {
   background: var(--surface-color);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   padding: 0.4rem 0.8rem;
@@ -1848,7 +1848,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.resume .education-skills .education-grid .education-card {
+.experienceducation .education-skills .education-grid .education-card {
   background: var(--surface-color);
   border-radius: 12px;
   padding: 2rem;
@@ -1857,12 +1857,12 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
-.resume .education-skills .education-grid .education-card.primary {
+.experienceducation .education-skills .education-grid .education-card.primary {
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
   position: relative;
 }
 
-.resume .education-skills .education-grid .education-card.primary::before {
+.experienceducation .education-skills .education-grid .education-card.primary::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1873,19 +1873,19 @@ section,
   border-radius: 12px 12px 0 0;
 }
 
-.resume .education-skills .education-grid .education-card:hover {
+.experienceducation .education-skills .education-grid .education-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.resume .education-skills .education-grid .education-card .education-header {
+.experienceducation .education-skills .education-grid .education-card .education-header {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-icon {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-icon {
   width: 40px;
   height: 40px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -1896,16 +1896,16 @@ section,
   flex-shrink: 0;
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-icon i {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-icon i {
   font-size: 1.1rem;
   color: var(--accent-color);
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-info {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-info {
   flex: 1;
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-info h3 {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-info h3 {
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--heading-color);
@@ -1913,28 +1913,28 @@ section,
   letter-spacing: -0.01em;
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-info .institution {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-info .institution {
   font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
-.resume .education-skills .education-grid .education-card .education-header .degree-info .graduation-year {
+.experienceducation .education-skills .education-grid .education-card .education-header .degree-info .graduation-year {
   font-size: 0.9rem;
   color: var(--accent-color);
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.resume .education-skills .education-grid .education-card .education-details p {
+.experienceducation .education-skills .education-grid .education-card .education-details p {
   font-size: 0.95rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 35%);
   margin-bottom: 1rem;
 }
 
-.resume .education-skills .education-grid .education-card .education-details .honors .honor-badge {
+.experienceducation .education-skills .education-grid .education-card .education-details .honors .honor-badge {
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   padding: 0.3rem 0.8rem;
@@ -1944,11 +1944,11 @@ section,
   letter-spacing: 0.02em;
 }
 
-.resume .education-skills .education-grid .certification-section {
+.experienceducation .education-skills .education-grid .certification-section {
   margin-top: 2rem;
 }
 
-.resume .education-skills .education-grid .certification-section h4 {
+.experienceducation .education-skills .education-grid .certification-section h4 {
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--heading-color);
@@ -1956,7 +1956,7 @@ section,
   letter-spacing: -0.01em;
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -1964,122 +1964,122 @@ section,
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item:last-child {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item:last-child {
   border-bottom: none;
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item i {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item i {
   color: var(--accent-color);
   font-size: 1.1rem;
   flex-shrink: 0;
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item .cert-details {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item .cert-details {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item .cert-details .cert-name {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item .cert-details .cert-name {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--heading-color);
 }
 
-.resume .education-skills .education-grid .certification-section .certifications .cert-item .cert-details .cert-provider {
+.experienceducation .education-skills .education-grid .certification-section .certifications .cert-item .cert-details .cert-provider {
   font-size: 0.85rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 @media (max-width: 992px) {
-  .resume .row {
+  .experienceducation .row {
     gap: 3rem 0;
   }
 
-  .resume .section-intro {
+  .experienceducation .section-intro {
     margin-bottom: 2rem;
   }
 
-  .resume .section-intro h2 {
+  .experienceducation .section-intro h2 {
     font-size: 1.8rem;
   }
 
-  .resume .section-intro p {
+  .experienceducation .section-intro p {
     font-size: 1rem;
   }
 
-  .resume .professional-journey {
+  .experienceducation .professional-journey {
     margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .resume .section-intro .icon-wrapper {
+  .experienceducation .section-intro .icon-wrapper {
     width: 50px;
     height: 50px;
   }
 
-  .resume .section-intro .icon-wrapper i {
+  .experienceducation .section-intro .icon-wrapper i {
     font-size: 1.3rem;
   }
 
-  .resume .section-intro h2 {
+  .experienceducation .section-intro h2 {
     font-size: 1.6rem;
   }
 
-  .resume .professional-journey .experience-timeline {
+  .experienceducation .professional-journey .experience-timeline {
     padding-left: 1.5rem;
   }
 
-  .resume .professional-journey .experience-timeline .timeline-item .timeline-dot {
+  .experienceducation .professional-journey .experience-timeline .timeline-item .timeline-dot {
     left: -1.8rem;
   }
 
-  .resume .education-skills .education-grid .education-card {
+  .experienceducation .education-skills .education-grid .education-card {
     padding: 1.5rem;
   }
 
-  .resume .education-skills .education-grid .education-card .education-header .degree-icon {
+  .experienceducation .education-skills .education-grid .education-card .education-header .degree-icon {
     width: 35px;
     height: 35px;
   }
 
-  .resume .education-skills .education-grid .education-card .education-header .degree-icon i {
+  .experienceducation .education-skills .education-grid .education-card .education-header .degree-icon i {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 576px) {
-  .resume .section-intro .icon-wrapper {
+  .experienceducation .section-intro .icon-wrapper {
     width: 45px;
     height: 45px;
     margin-bottom: 1rem;
   }
 
-  .resume .section-intro .icon-wrapper i {
+  .experienceducation .section-intro .icon-wrapper i {
     font-size: 1.2rem;
   }
 
-  .resume .section-intro h2 {
+  .experienceducation .section-intro h2 {
     font-size: 1.4rem;
   }
 
-  .resume .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements .achievement-tag {
+  .experienceducation .professional-journey .experience-timeline .timeline-item .timeline-content .key-achievements .achievement-tag {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
   }
 
-  .resume .education-skills .education-grid .education-card {
+  .experienceducation .education-skills .education-grid .education-card {
     padding: 1.2rem;
   }
 
-  .resume .education-skills .education-grid .education-card .education-header {
+  .experienceducation .education-skills .education-grid .education-card .education-header {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
   }
 
-  .resume .education-skills .education-grid .certification-section .certifications .cert-item {
+  .experienceducation .education-skills .education-grid .certification-section .certifications .cert-item {
     padding: 0.8rem 0;
   }
 }
