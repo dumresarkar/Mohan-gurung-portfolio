@@ -1,1316 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mohan Gurung Portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohan Gurung — Media Professional & Visual Storyteller</title>
+  <meta name="description" content="Media Professional, Visual Storyteller, MPhil-PhD Research Scholar">
+    <!-- Favicons -->
   <link href="assets/img/favicon_io/favicon.ico" rel="icon">
   <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("themeToggle");
-  if (!toggleBtn) return;
-
-  const themes = ["light", "dark", "pastel"];
-  let currentTheme = localStorage.getItem("theme") || "light";
-
-  applyTheme(currentTheme);
-
-  toggleBtn.addEventListener("click", () => {
-    let index = themes.indexOf(currentTheme);
-    currentTheme = themes[(index + 1) % themes.length];
-    applyTheme(currentTheme);
-  });
-
-  function applyTheme(theme) {
-    if (theme === "light") {
-      document.documentElement.removeAttribute("data-theme");
-      toggleBtn.textContent = "🌙";
-    } else {
-      document.documentElement.setAttribute("data-theme", theme);
-      toggleBtn.textContent = theme === "dark" ? "🌸" : "☀️";
-    }
-    localStorage.setItem("theme", theme);
-  }
-});
-</script>
-  <!-- Main CSS File -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="index-page">
+  <!-- ─── SCROLL PROGRESS ─── -->
+  <div id="scroll-progress"></div>
 
-  <header id="header" class="header dark-background d-flex flex-column justify-content-between">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <div class="header-top">
-      <div class="profile-img position-relative">
-        <img src="assets/img/person/mohan-grg-1.jpg" alt="" class="img-fluid">
-      </div>
-      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Mohan Gurung</h1>
-        <a id="themeToggle" class="theme-toggle position-absolute"  style="font-size: xx-large;top: 280px;right: 32px;">🌙</button>
+  <!-- ─── BACK TO TOP ─── -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
 
-      </a>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Mohan <span>Gurung</span></a>
+
+    <!-- Desktop nav links -->
+    <ul class="nav-links">
+      <li><a href="#about"      class="desk-link">About</a></li>
+      <li><a href="#skills"     class="desk-link">Skills</a></li>
+      <li><a href="#experience" class="desk-link">Experience</a></li>
+      <li><a href="#education"  class="desk-link">Education</a></li>
+      <li><a href="#now"        class="desk-link">Now</a></li>
+      <li><a href="#portfolio"  class="desk-link">Portfolio</a></li>
+      <li><a href="#contact"    class="desk-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#experience"><i class="bi bi-briefcase-fill navicon"></i> Experience</a></li>
-        <li><a href="#education"><i class="bi bi-mortarboard-fill navicon"></i> Education</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="social-links text-center">
-      <a href="https://x.com/mohantamoo?fbclid=IwY2xjawO3j89leHRuA2FlbQIxMABicmlkETFvbFhkWE8xeDhZZEJ1aERvc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhkkqhhkTT6ARBUyu411ohE5MHv-xz3QcYKwoFvhyTgSIxWnUJZGL5jmdMJX_aem_AYD5w4rj7ReQJYRyZjNFIw" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/mohan_tamuu" target="_blank"><i class="bi bi-facebook"></i></a>
-        <!-- <a href="instagram.com/mohan_tamuu" target="_blank"><i class="bi bi-instagram"></i></a> -->
-        <a href="www.tiktok.com/@mohantamoo" target="_blank"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.youtube.com/@mohangurungpodcast" target="_blank"><i class="bi bi-youtube"></i></a>
-        <!-- <a href=""><i class="bi bi-skype"></i></a> -->
-        <a href="https://www.linkedin.com/in/mohan-gurung-16983725a/"><i class="bi bi-linkedin"></i></a>
-    </div>
-  </header>
-
-  <main class="main p-3">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-      <div class="container p-0" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-center">
-          <div class="hero-content ">
-              <h1 data-aos="fade-up" data-aos-delay="200">
-                Media Professional &amp;
-                <span class="accent-text shineeff">Visual Storyteller</span>
-              </h1>
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1">
-            <div class="hero-content">
-              <!-- <h1 data-aos="fade-up" data-aos-delay="200">
-                Media Professional &amp;
-                <span class="accent-text">Visual Storyteller</span>
-              </h1> -->
-              <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-                “मेडिया प्रोफेसनल, भिजुअल स्टोरीटेलर तथा एमफिल–पिएचडी रिसर्च स्कलर, जो भाषाविज्ञानको 
-                गहिरो बुझाइ र सिर्जनशील दृष्टिकोणलाई जोडेर दैनन्दिन जीवन, नीति र संस्कृतिका कथाहरूलाई प्रभावशाली मल्टिमिडिया सामग्रीमा रूपान्तरण गर्छन्, जसले दर्शकलाई छोइदिन्छ, संवाद जगाउँछ र लामो समयसम्म सम्झनामा बसिरहन्छ।”
-              </p>
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="#portfolio" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-secondary">Get In Touch</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 order-1 order-lg-2">
-            <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
-              <div class="image-wrapper">
-                <img src="assets/img/person/mohan-grg-3.jpg" alt="Creative Designer Portfolio" class="img-fluid main-image">
-                <div class="floating-card card-1" data-aos="fade-up" data-aos-delay="600">
-                  <i class="bi bi-mic"></i>
-                  <span>Podcast Presenter</span>
-                </div>
-                <div class="floating-card card-2" data-aos="fade-up" data-aos-delay="700">
-                  <i class="bi bi-newspaper"></i>
-                  <span>News Editor</span>
-                </div>
-                <div class="floating-card card-3" data-aos="fade-up" data-aos-delay="800">
-                  <i class="bi bi-play-circle"></i>
-                  <span>Digital Creator</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
-              <h1>Hi, I'm Mohan Gurung</h1>
-              <p class="subtitle">Media Professional &amp; Creative Strategist</p>
-            </div>
-            <div class="main-content-wrapper">
-              <div class="row align-items-start">
-
-                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
-                  <div class="profile-section" style="justify-content: center; display: grid;">
-                    <div class="profile-image-container">
-                      <img src="assets/img/person/mohan-grg-2.jpg" class="img-fluid" alt="Sarah Chen">
-                    </div>
-                    <div class="profile-meta">
-                      <div class="location">
-                        <i class="bi bi-geo-alt"></i>
-                        <span>Walling, Syangja</span>
-                      </div>
-                      <div class="status">
-                        <div class="status-indicator"></div>
-                        <span>Available for collaborations and consulting.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-8" data-aos="fade-left" data-aos-delay="250">
-                  <div class="content-area">
-
-                    <div class="story-block">
-                      <p class="lead-text">
-                        Mohan Gurung is a media professional and visual storyteller who has worked as a news editor,
-                         reporter, podcast host, and communications trainer with national organizations in Nepal.
-                          His diverse experience across newsroom, audio, and training spaces reflects a deep commitment 
-                          to clear, impactful public communication.
-                      </p>
-
-                      <p>He currently serves on the Advertisement Board Nepal and is an MPhil‑PhD research scholar at the Central Department of Linguistics,
-                         Tribhuvan University. His research explores how language, media, and public narratives shape social change, linking academic insight
-                          with practical storytelling in the field.</p>
-                    </div>
-
-                    <div class="expertise-grid">
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="expertise-icon">
-                          <i class="bi bi-lightbulb"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4>Product Strategy</h4>
-                          <p>User research, journey mapping, and strategic design thinking</p>
-                        </div>
-                      </div>
-
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="350">
-                        <div class="expertise-icon">
-                          <i class="bi bi-megaphone"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4>Language, policy & public communication</h4>
-                          <p>Uses linguistics research to design messages that connect with the public and support meaningful social change</p>
-                        </div>
-                      </div>
-
-                      <div class="expertise-item" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="expertise-icon">
-                          <i class="bi bi-collection-play"></i>
-                        </div>
-                        <div class="expertise-content">
-                          <h4> Media production & storytelling</h4>
-                          <p>Crafts clear, engaging news, podcast, and visual stories that make complex issues easy to understand and feel.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="philosophy-quote" data-aos="fade-up" data-aos-delay="450">
-                      <div class="quote-mark">"</div>
-                      <p>हरेक चुनौतीको सामना गर्ने बानी परेको छ । सानातिना समस्याले मात्र मान्छे परिपक्व हुँदैन भन्ने कुराको अनुभव गरिरहेको छु । समस्याहरूसँग जुध्ने साहस बटुल्दै, र सोही साहसलाई ऊर्जामा रूपान्तरण गर्दै म आफ्नो दैनिकी चलाइरहेको छु।</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bottom-section" data-aos="fade-up" data-aos-delay="500">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="collaboration-text">
-                    <h3>Let's create something amazing together</h3>
-                    <p>Whether you're looking to redesign an existing product or build something completely new, I'd love to explore how we can bring your vision to life.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="action-buttons">
-                    <a href="#portfolio" class="btn-custom primary">View amazing Work</a>
-                    <a href="#contact" class="btn-custom secondary">Contact</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-<section id="skills" class="skills section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-    <p>Blending linguistics, mass communication, public health, and digital media to create impactful narratives, responsible journalism, and research-driven content for diverse audiences.</p>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#hero" class="menu-link">Home</a>
+    <a href="#about" class="menu-link">About</a>
+    <a href="#skills" class="menu-link">Skills</a>
+    <a href="#experience" class="menu-link">Experience</a>
+    <a href="#education" class="menu-link">Education</a>
+    <a href="#now" class="menu-link">Now</a>
+    <a href="#portfolio" class="menu-link">Portfolio</a>
+    <a href="#contact" class="menu-link">Contact</a>
   </div>
-  <!-- End Section Title -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="intro-content text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-          <p class="lead-text">Experience shaped through field reporting, editorial leadership, academic research, and creative digital storytelling.</p>
-        </div>
-      </div>
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-image-side">
+      <img src="assets/img/person/mohan-grg-1.jpg" alt="Mohan Gurung">
     </div>
-
-    <div class="row">
-      <!-- Left main skills -->
-      <div class="col-lg-8">
-        <div class="skills-container">
-
-          <!-- Communication & Editorial -->
-          <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="200">
-            <div class="category-header">
-              <h3 class="category-title">Communication & Editorial</h3>
-              <p class="category-subtitle">Writing, editing, reporting, and linguistic expertise</p>
-            </div>
-            <div class="skills-list">
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Editorial Management & Editing</span>
-                  <span class="skill-percentage">92%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">News Reporting & Fieldwork</span>
-                  <span class="skill-percentage">88%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Academic & Research Writing</span>
-                  <span class="skill-percentage">85%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Digital Media & Content -->
-          <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="250">
-            <div class="category-header">
-              <h3 class="category-title">Digital Media & Content</h3>
-              <p class="category-subtitle">Podcasting, social media, and creative storytelling</p>
-            </div>
-            <div class="skills-list">
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Podcast Hosting & Presentation</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Digital Content Creation</span>
-                  <span class="skill-percentage">87%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Social Media Communication</span>
-                  <span class="skill-percentage">82%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Leadership, Teaching & Field Roles -->
-          <div class="skill-category skills-animation" data-aos="fade-up" data-aos-delay="300">
-            <div class="category-header">
-              <h3 class="category-title">Leadership & Field Engagement</h3>
-              <p class="category-subtitle">Management, teaching, supervision, and community work</p>
-            </div>
-            <div class="skills-list">
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Team Leadership & Coordination</span>
-                  <span class="skill-percentage">89%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Teaching & Training</span>
-                  <span class="skill-percentage">84%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="skill-row">
-                <div class="skill-info">
-                  <span class="skill-name">Field Supervision & Monitoring</span>
-                  <span class="skill-percentage">83%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-text-side">
+      <p class="hero-eyebrow">Media Professional · Nepal</p>
+      <h1 class="hero-name">
+        Mohan<br>
+        <em>Gurung</em>
+      </h1>
+      <div class="hero-title-bar">
+        <span>Visual Storyteller &amp; Research Scholar</span>
       </div>
-
-      <!-- Right sidebar -->
-      <div class="col-lg-4">
-        <div class="skills-sidebar">
-
-          <!-- Experience highlight -->
-          <div class="expertise-highlight" data-aos="fade-up" data-aos-delay="350">
-            <div class="highlight-icon">
-              <i class="bi bi-trophy"></i>
-            </div>
-            <h4 class="highlight-title">Years of Experience</h4>
-            <div class="experience-number">
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-              <span class="experience-label">Years</span>
-            </div>
-            <p class="highlight-description">Engaged in journalism, editorial work, teaching, human rights monitoring, and research across Nepal.</p>
-          </div>
-
-          <!-- Focus areas / tools -->
-          <div class="technologies-section" data-aos="fade-up" data-aos-delay="400">
-            <h5 class="tech-title">Focus Areas</h5>
-            <div class="tech-stack">
-              <div class="tech-item">
-                <i class="bi bi-translate"></i>
-                <span>Linguistics & Language</span>
-              </div>
-              <div class="tech-item">
-                <i class="bi bi-mic-fill"></i>
-                <span>Podcasting & Voice</span>
-              </div>
-              <div class="tech-item">
-                <i class="bi bi-newspaper"></i>
-                <span>Journalism & Media</span>
-              </div>
-              <div class="tech-item">
-                <i class="bi bi-people-fill"></i>
-                <span>Community & Field Work</span>
-              </div>
-              <div class="tech-item">
-                <i class="bi bi-heart-pulse"></i>
-                <span>Public Health Perspective</span>
-              </div>
-              <div class="tech-item">
-                <i class="bi bi-mortarboard"></i>
-                <span>Academic Research</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End right sidebar -->
-    </div>
-  </div>
-</section>
-<!-- /Skills Section -->
-
-<section class="resume section" aria-labelledby="resume-title">
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row align-items-start">
-
-      
-    </div>
-  </div>
-</section>
-<section  id="experience" class="experienceducation section" >
-<!-- Professional Experience Section -->
-      <div class="row" aria-labelledby="experience-title" data-aos="fade-right" data-aos-delay="200">
-        <div class="professional-journey">
-          <div class="section-intro">
-            <!-- <div class="icon-wrapper">
-              <i class="bi bi-briefcase-fill"></i>
-            </div> -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Professional Experience</h2>
-                <p>Extensive experience across editorial leadership, reporting, digital content creation, and supervision roles in media, civil society, and local government.</p>
-            </div>
-          </div>
-
-          <div class="experience-timeline">
-            <div class="experience-timeline">
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <span class="timeline-year">2023 – Present</span>
-                </div>
-                <h3>Podcast Presenter</h3>
-                <h4>Mohan Gurung</h4>
-                <p>Hosts and produces podcasts focused on social issues, language, and contemporary discourse, engaging diverse audiences through digital platforms.</p>
-                <div class="key-achievements">
-                  <span class="achievement-tag">Digital Creator</span>
-                  <span class="achievement-tag">Content Strategy</span>
-                  <span class="achievement-tag">Audience Engagement</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="330">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <span class="timeline-year">Board Tenure</span>
-                </div>
-                <h3>Board Member</h3>
-                <h4>Advertisement Board Nepal</h4>
-                <p>Contributes to policy, governance, and strategic decisions in advertising regulation and media-related initiatives at the national level.</p>
-                <div class="key-achievements">
-                  <span class="achievement-tag">Governance</span>
-                  <span class="achievement-tag">Policy Input</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="360">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Editor-in-Chief</h3>
-                <h4>Mohan Gurung / मोहन गुरुङ</h4>
-                <p>Led editorial direction, managed newsroom operations, and oversaw content standards for a multi-platform media brand.</p>
-                <div class="key-achievements">
-                  <span class="achievement-tag">Editorial Leadership</span>
-                  <span class="achievement-tag">Team Management</span>
-                  <span class="achievement-tag">Content Quality</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="390">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Editor-in-Chief</h3>
-                <h4>Mero Dristy</h4>
-                <p>Directed editorial policy and coordinated reporting teams to deliver in-depth coverage on social, political, and local issues.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="420">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Editor</h3>
-                <h4>Akala Aawaj</h4>
-                <p>Edited news and feature content, ensuring accuracy, clarity, and adherence to editorial ethics and standards.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="450">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Sub-Editor</h3>
-                <h4>Nepal Bahas</h4>
-                <p>Supported the editorial desk with content refinement, headline writing, and layout coordination for print and digital editions.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="480">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Reporter</h3>
-                <h4>Republica</h4>
-                <p>Reported on local and national issues, conducting field visits, interviews, and fact-checking to develop accurate news stories.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="510">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>District Representative</h3>
-                <h4>INSEC</h4>
-                <p>Monitored and documented human rights and social justice issues at the district level, coordinating with local stakeholders.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="540">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Supervisor</h3>
-                <h4>Waling Municipality</h4>
-                <p>Supervised local-level activities and supported implementation and monitoring of municipal programs and services.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="570">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="position-meta">
-                  <!-- <span class="timeline-year">Year – Year</span> -->
-                </div>
-                <h3>Assistant Teacher</h3>
-                <h4>Armadi English School</h4>
-                <p>Taught and supported students in classroom activities, focusing on language, communication, and foundational skills.</p>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-</section>
-      
-<section id="education" class="experienceducation section">
-<!-- Education & Qualifications Section -->
-      <div 
-               class="row"
-               aria-labelledby="education-title" data-aos="fade-left" data-aos-delay="200">
-        <div class="education-skills">
-          <div class="section-intro">
-
-            <div class="container section-title" data-aos="fade-up">
-    <h2>Education &amp; Qualifications</h2>
-    <p>Academic foundation in linguistics, mass communication, and public health, combining research skills with applied media and social science practice.</p>
-  </div>
-            
-          </div>
-          <div class="education-grid">
-            <div class="education-grid">
-
-            <div class="education-card primary" data-aos="zoom-in" data-aos-delay="300">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-award"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>MPhil–PhD (Linguistics)</h3>
-                  <p class="institution">Central Department of Linguistics, Tribhuvan University</p>
-                  <span class="graduation-year">Research Scholar</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Engaged in advanced research in linguistics with focus on language, society, and communication in the Nepali context.</p>
-              </div>
-            </div>
-
-            <div class="education-card" data-aos="zoom-in" data-aos-delay="340">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-journal-medical"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>Master of Public Health (MPH)</h3>
-                  <p class="institution">Tribhuvan University</p>
-                  <span class="graduation-year">Completed</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Studied public health policy, research methods, and community health, integrating communication and development perspectives.</p>
-              </div>
-            </div>
-
-            <div class="education-card" data-aos="zoom-in" data-aos-delay="380">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-megaphone-fill"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>Mass Communication</h3>
-                  <p class="institution">Purbanchal University</p>
-                  <span class="graduation-year">Completed</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Developed professional skills in journalism, media studies, and communication theory with practical newsroom exposure.</p>
-              </div>
-            </div>
-
-            <div class="education-card" data-aos="zoom-in" data-aos-delay="420">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-book-half"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>Studies in Linguistics</h3>
-                  <p class="institution">Tribhuvan University</p>
-                  <span class="graduation-year">Ongoing/Completed</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Focused on language structure, sociolinguistics, and applied linguistics relevant to Nepali languages and communities.</p>
-              </div>
-            </div>
-
-            <div class="education-card" data-aos="zoom-in" data-aos-delay="460">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-building"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>Higher Secondary Education</h3>
-                  <p class="institution">Waling Multiple Campus</p>
-                  <span class="graduation-year">Graduate</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Completed higher education with focus on social sciences and communication-related subjects.</p>
-              </div>
-            </div>
-
-            <div class="education-card" data-aos="zoom-in" data-aos-delay="500">
-              <div class="education-header">
-                <div class="degree-icon">
-                  <i class="bi bi-building"></i>
-                </div>
-                <div class="degree-info">
-                  <h3>School Education</h3>
-                  <p class="institution">Shree Majhkot Higher Secondary School, Syangja</p>
-                  <span class="graduation-year">Graduate</span>
-                </div>
-              </div>
-              <div class="education-details">
-                <p>Completed school-level education, building foundations in language, social studies, and civic awareness.</p>
-              </div>
-            </div>
-
-            <!-- Optional Certifications / Roles section -->
-            <div class="certification-section" data-aos="fade-up" data-aos-delay="540">
-              <h4>Profiles &amp; Roles</h4>
-              <div class="certifications">
-                <div class="cert-item">
-                  <i class="bi bi-patch-check"></i>
-                  <div class="cert-details">
-                    <span class="cert-name">Digital Creator &amp; Media Professional</span>
-                    <span class="cert-provider">Active across podcasts, social media platforms, and editorial projects.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p>Selected podcast episodes, interviews, lok geet–focused conversations, and digital storytelling projects published through YouTube and other online platforms, highlighting journalism, linguistics, and social issues.</p>
-  </div>
-  <!-- End Section Title -->
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-<div class="portfolio-image">
-              <!-- Clickable thumbnail -->
-              <a href="https://www.youtube.com/@mohangurungpodcast"
-                 target="_blank" rel="noopener" title="Watch on YouTube">
-                <img src="assets/img/portfolio/channels4_banner.jpg"
-                     class="img-fluid" alt="YouTube Channel Cover" loading="lazy">
-              </a>
-              <div class="portfolio-overlay">
-                <div class="portfolio-actions">
-                  <!-- Preview larger image in lightbox -->
-                  <a href="assets/img/portfolio/channels4_banner.jpg"
-                     class="glightbox action-btn preview-btn"
-                     title="YouTube Channel Overview">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                  <!-- Go to YouTube channel/video -->
-                  <a href="https://www.youtube.com/@mohangurungpodcast"
-                     target="_blank" class="action-btn details-btn"
-                     title="View Channel">
-                    <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-      <div class="filters-wrapper" data-aos="fade-up" data-aos-delay="200">
-        <ul class="portfolio-filters isotope-filters">
-          <li data-filter=".filter-podcasts">Podcasts</li>          
-        </ul>
-      </div>
-
-      <div class="row gy-5 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-        <!-- Channel / Playlist Highlight -->
-        <div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <!-- Clickable thumbnail -->
-              <a href="https://youtu.be/UJhRj5_6R0E?si=hYggO70do8xPAl_A"
-                 target="_blank" rel="noopener" title="Watch on YouTube">
-                <img src="https://img.youtube.com/vi/UJhRj5_6R0E/maxresdefault.jpg"
-                     class="img-fluid" alt="YouTube Channel Cover" loading="lazy">
-              </a>
-              <div class="portfolio-overlay">
-                <div class="portfolio-actions">
-                  <!-- Preview larger image in lightbox -->
-                  <a href="https://img.youtube.com/vi/UJhRj5_6R0E/maxresdefault.jpg"
-                     class="glightbox action-btn preview-btn"
-                     title="YouTube Channel Overview">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                  <!-- Go to YouTube channel/video -->
-                  <a href="https://youtu.be/UJhRj5_6R0E?si=hYggO70do8xPAl_A"
-                     target="_blank" class="action-btn details-btn"
-                     title="View Channel">
-                    <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <div class="portfolio-meta">
-                <span class="portfolio-category">#podcast #narayanrayamajhi #mohangurung</span>
-                <span class="portfolio-year">Active</span>
-              </div>
-              <h3 class="portfolio-title">नेपाली लाेकसंगीतका धराेहर नारायण रायमाझी I NARAYAN RAYAMAJHI II MOHAN GURUNG Podcast I Episode 01</h3>
-              <p class="portfolio-description" data-bs-toggle="tooltip" data-bs-placement="top" title="Narayan Rayamajhi, a leading person of folklore and music and a film director, was born in Jhadewa VDC 05 Palpa District (currently Mathagadhi Rural Municipality ward 04). He is a second child of father Surya Bahadur Rayamajhi and mother Krishna Kumari Rayamajhi. Narayan Rayamajhi is a constant seeker of folk songs, music and culture.
-
-Narayan Rayamajhi, who has dedicated his life to music, is a master of original folk music. He has become a popular director in the field of folk art, culture as well as film industry.
-
-He is a source of inspiration for all who are interested in Nepali art, culture and music. Rich in simple lifestyle, sweetness, soft-spoken and energetic behavior, Rayamajhi has become the center of faith of many artists. Narayan Rayamajhi, honored with dozens of honors at home and abroad, also served in Radio Nepal as an artist and national servant for two decades.
-
-He is not only a pioneer in this field, but also a guide, a leader and an activist. He is well-known among Nepalis and Nepali speakers all over the world.
-
-Hundreds of popular songs like Shirma Ribbon, Tinau Kholama, Pisinale Paisa Satera, Ramdi Pula, Maya Paincho Nadeu Sainli, Laichhau Beshana, Namuchhe Aama Dahima Tika, Hansher Bolideu Maya, Sannanile Jhukkayo Malai etc. are in everyone's heart.
-
-All Nepali people of all generations are used to enjoying and rejoicing in the tunes of these songs. He has also directed films based on the original story of Nepali society including Gorkha Paltan, Pardeshi-I and Pardeshi-II.">Narayan Rayamajhi, a leading person of folklore and music and a film director, was born in Jhadewa VDC 05 Palpa District (currently Mathagadhi Rural Municipality ward 04). He is a second child of father Surya Bahadur Rayamajhi and mother Krishna Kumari Rayamajhi. Narayan Rayamajhi is a constant seeker of folk songs, music and culture.
-
-Narayan Rayamajhi, who has dedicated his life to music, is a master of original folk music. He has become a popular director in the field of folk art, culture as well as film industry.
-
-He is a source of inspiration for all who are interested in Nepali art, culture and music. Rich in simple lifestyle, sweetness, soft-spoken and energetic behavior, Rayamajhi has become the center of faith of many artists. Narayan Rayamajhi, honored with dozens of honors at home and abroad, also served in Radio Nepal as an artist and national servant for two decades.
-
-He is not only a pioneer in this field, but also a guide, a leader and an activist. He is well-known among Nepalis and Nepali speakers all over the world.
-
-Hundreds of popular songs like Shirma Ribbon, Tinau Kholama, Pisinale Paisa Satera, Ramdi Pula, Maya Paincho Nadeu Sainli, Laichhau Beshana, Namuchhe Aama Dahima Tika, Hansher Bolideu Maya, Sannanile Jhukkayo Malai etc. are in everyone's heart.
-
-All Nepali people of all generations are used to enjoying and rejoicing in the tunes of these songs. He has also directed films based on the original story of Nepali society including Gorkha Paltan, Pardeshi-I and Pardeshi-II.</p>
-            </div>
-          </div>
-        </div>
-        <!-- End Portfolio Item -->
-
-        <!-- Example Video 1 -->
-        <div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-    <div class="portfolio-card">
-      <div class="portfolio-image">
-        <a href="https://youtu.be/C2q2K3U6qOs?si=0nX9A35GqiMwvEdr"
-           target="_blank" rel="noopener" title="Watch on YouTube">
-          <img src="https://img.youtube.com/vi/C2q2K3U6qOs/maxresdefault.jpg"
-               class="img-fluid" alt="Shila Ale podcast thumbnail" loading="lazy">
-        </a>
-        <div class="portfolio-overlay">
-          <div class="portfolio-actions">
-            <a href="https://img.youtube.com/vi/C2q2K3U6qOs/maxresdefault.jpg"
-               class="glightbox action-btn preview-btn"
-               title="Episode Thumbnail">
-              <i class="bi bi-eye"></i>
-            </a>
-            <a href="https://youtu.be/C2q2K3U6qOs?si=0nX9A35GqiMwvEdr"
-               target="_blank" class="action-btn details-btn"
-               title="Watch on YouTube">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-content">
-        <div class="portfolio-meta">
-          <span class="portfolio-category">#shilaale #podcast #mohangurung</span>
-          <span class="portfolio-year">2024</span>
-        </div>
-        <h3 class="portfolio-title">
-          गायिका शिला आलेकाे आँबुखैरेनीदेखि अमेरिकासम्मकाे यात्रा ।
-        </h3>
-        <p class="portfolio-description">
-          गायिका शिला आलेकाे आँबुखैरेनीदेखि अमेरिकासम्मकाे यात्रा । Singer Sheela Ale's journey from Ambukhaireni to America.
-        </p>
-      </div>
-    </div>
-  </div>
-        <!-- End Portfolio Item -->
-
-        <!-- Example Video 2 -->
-        <div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-    <div class="portfolio-card">
-      <div class="portfolio-image">
-        <a href="https://youtu.be/1L5s60NZ5D0?si=l9ksiey5PFOfkeWJ"
-           target="_blank" rel="noopener" title="Watch on YouTube">
-          <img src="https://img.youtube.com/vi/1L5s60NZ5D0/maxresdefault.jpg"
-               class="img-fluid" alt="Khuman Adhikari podcast thumbnail" loading="lazy">
-        </a>
-        <div class="portfolio-overlay">
-          <div class="portfolio-actions">
-            <a href="https://img.youtube.com/vi/1L5s60NZ5D0/maxresdefault.jpg"
-               class="glightbox action-btn preview-btn"
-               title="Episode Thumbnail">
-              <i class="bi bi-eye"></i>
-            </a>
-            <a href="https://youtu.be/1L5s60NZ5D0?si=l9ksiey5PFOfkeWJ"
-               target="_blank" class="action-btn details-btn"
-               title="Watch on YouTube">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-content">
-        <div class="portfolio-meta">
-          <span class="portfolio-category">#rajiPariyar #podcast #manju</span>
-          <span class="portfolio-year">2024</span>
-        </div>
-        <h3 class="portfolio-title">
-          ह्वात्त आएर ह्वात्त जानेलाई भाइरल भनिन्छ II KHUMAN ADHIKARI II MOHAN GURUNG Podcast• Episode 3
-        </h3>
-        <p class="portfolio-description">
-           KHUMAN ADHIKARI is a popular folk artist from Nepal. He was born in Syangja District. 
-           Khuman Adhikari who has dedicated his life to Nepali folk literature specially folk music. Thousands of Popular sons like 'JOR SHANKHA FUKERA', 'DEKHNA MAN LAKO CHHAINARA', 'SILAI DIULA BHOTO', 'PHONE UTHAUNA SANU', 'EUTAI DORI PASO LAGAM BHO', 'ABA TA BIHE GARAU BHO', 'TYO MAN RUNNA HOLARA', 'SYANGJALILAI NABHANA JAALI' etc. are in everyone's heart. ❤️ 
-        </p>
-      </div>
-    </div>
-  </div>
-        <!-- End Portfolio Item -->
-
-        <!-- Example Video 3 -->
-        <div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-    <div class="portfolio-card">
-      <div class="portfolio-image">
-        <a href="https://youtu.be/iZ6qQidloJ0?si=grdFRHWTbmHkwbcM"
-           target="_blank" rel="noopener" title="Watch on YouTube">
-          <img src="https://img.youtube.com/vi/iZ6qQidloJ0/maxresdefault.jpg"
-               class="img-fluid" alt="Podcast thumbnail" loading="lazy">
-        </a>
-        <div class="portfolio-overlay">
-          <div class="portfolio-actions">
-            <a href="https://img.youtube.com/vi/iZ6qQidloJ0/maxresdefault.jpg"
-               class="glightbox action-btn preview-btn"
-               title="Episode Thumbnail">
-              <i class="bi bi-eye"></i>
-            </a>
-            <a href="https://youtu.be/iZ6qQidloJ0?si=grdFRHWTbmHkwbcM"
-               target="_blank" class="action-btn details-btn"
-               title="Watch on YouTube">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-content">
-        <div class="portfolio-meta">
-          <span class="portfolio-category">#khumanadhikari #podcast #mohangurung</span>
-          <span class="portfolio-year">2024</span>
-        </div>
-        <h3 class="portfolio-title">
-         स्वर सम्राट राजु परियार र ठाडाे भाकाका गायिका मञ्जु बि‍कसँग लाेकगीत र लाेकदाेहाेरीका कुरा
-        </h3>
-        <p class="portfolio-description">
-          Raju Pariyar is a famous singer of folk and duet songs. He sang about 17 thousand songs. His popular songs are, SUNPANI, MIRMIREKO GHAM, LALUPATE NUGYO BHUITIRA etc.
-          Manju B.K. is a famous folk and duet song singer. She is specifically singing a Lamjunnge THADO BHAKA, folk and duet song.
-        </p>
-      </div>
-    </div>
-  </div>
-        <!-- End Portfolio Item -->
-
-        <!-- Example Video 4 -->
-        <div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-    <div class="portfolio-card">
-      <div class="portfolio-image">
-        <a href="https://youtu.be/SV97vZkXyv0?si=raGkrNfouQ97kC7m"
-           target="_blank" rel="noopener" title="Watch on YouTube">
-          <img src="https://img.youtube.com/vi/SV97vZkXyv0/maxresdefault.jpg"
-               class="img-fluid" alt="Podcast thumbnail" loading="lazy">
-        </a>
-        <div class="portfolio-overlay">
-          <div class="portfolio-actions">
-            <a href="https://img.youtube.com/vi/SV97vZkXyv0/maxresdefault.jpg"
-               class="glightbox action-btn preview-btn"
-               title="Episode Thumbnail">
-              <i class="bi bi-eye"></i>
-            </a>
-            <a href="https://youtu.be/SV97vZkXyv0?si=raGkrNfouQ97kC7m"
-               target="_blank" class="action-btn details-btn"
-               title="Watch on YouTube">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-content">
-        <div class="portfolio-meta">
-          <span class="portfolio-category">#folklore #badripangeni #mohangurung#mohangurungpodcast#podcast</span>
-          <span class="portfolio-year">2024</span>
-        </div>
-        <h3 class="portfolio-title">
-         लोकगीत र लोकदोहोरी दाजुभाई हुन् II BADRI PANGENI II MOHAN GURUNG Podcast Ep:12
-        </h3>
-        <p class="portfolio-description">
-         Saurya News Pvt. Ltd. द्वारा सञ्चालित MOHAN GURUNG Podcast मा प्रसारित सामाग्री अनाधिकृत रुपमा प्रयोग गर्न/ नगराउन अनुरोध छ । यदि अनाधिकृत रुपमा प्रयोग गरे गराइएको पाइएमा प्रतिलिपि अधिकार ऐन २०५९ तथा प्रतिलिपि सम्बन्धी आकर्षित ऐन अनुसार कार्वाही गरिने व्यहोरा जानकारी गराइन्छ । 
-        </p>
-      </div>
-    </div>
-  </div>
-        <!-- End Portfolio Item -->
-
-        <!-- Example Video 5 -->
-<!-- Card 5 – 9z0TbwY3MYs -->
-<div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-  <div class="portfolio-card">
-    <div class="portfolio-image">
-      <a href="https://youtu.be/9z0TbwY3MYs?si=BoM_UJPPfhZlrc1S"
-         target="_blank" rel="noopener" title="Watch on YouTube">
-        <img src="https://img.youtube.com/vi/9z0TbwY3MYs/maxresdefault.jpg"
-             class="img-fluid" alt="Podcast thumbnail" loading="lazy">
-      </a>
-      <div class="portfolio-overlay">
-        <div class="portfolio-actions">
-          <a href="https://img.youtube.com/vi/9z0TbwY3MYs/maxresdefault.jpg"
-             class="glightbox action-btn preview-btn"
-             title="Episode Thumbnail">
-            <i class="bi bi-eye"></i>
-          </a>
-          <a href="https://youtu.be/9z0TbwY3MYs?si=BoM_UJPPfhZlrc1S"
-             target="_blank" class="action-btn details-btn"
-             title="Watch on YouTube">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-content">
-      <div class="portfolio-meta">
-        <span class="portfolio-category">#folklore</span>
-        <span class="portfolio-year">2024</span>
-      </div>
-      <h3 class="portfolio-title">लोकसंगीत बारे राज्यले छुटटै कानुन बनाओस ! RADHIKA HAMAL II MOHAN GURUNG Podcast Ep: 16</h3>
-      <p class="portfolio-description">
-        Saurya News Pvt. Ltd. द्वारा सञ्चालित MOHAN GURUNG Podcast मा प्रसारित सामाग्री अनाधिकृत रुपमा प्रयोग गर्न/ नगराउन अनुरोध छ ।
-         यदि अनाधिकृत रुपमा प्रयोग गरे/गराइएको पाइएमा प्रतिलिपि अधिकार ऐन २०५९ तथा प्रतिलिपि सम्बन्धी आकर्षित ऐन अनुसार कार्वाही गरिने व्यहोरा जानकारी गराइन्छ । 
+      <p class="hero-desc">
+        मेडिया प्रोफेसनल, भिजुअल स्टोरीटेलर तथा एमफिल–पिएचडी रिसर्च स्कलर — crafting narratives that connect language, culture, and public life.
       </p>
-    </div>
-  </div>
-</div>
-<!-- End Portfolio Item -->
-
-<!-- Card 6 – QVPBWZIaBHc -->
-<div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-  <div class="portfolio-card">
-    <div class="portfolio-image">
-      <a href="https://youtu.be/QVPBWZIaBHc?si=zLGSZS_xZoYJQOSe"
-         target="_blank" rel="noopener" title="Watch on YouTube">
-        <img src="https://img.youtube.com/vi/QVPBWZIaBHc/maxresdefault.jpg"
-             class="img-fluid" alt="Podcast thumbnail" loading="lazy">
-      </a>
-      <div class="portfolio-overlay">
-        <div class="portfolio-actions">
-          <a href="https://img.youtube.com/vi/QVPBWZIaBHc/maxresdefault.jpg"
-             class="glightbox action-btn preview-btn"
-             title="Episode Thumbnail">
-            <i class="bi bi-eye"></i>
-          </a>
-          <a href="https://youtu.be/QVPBWZIaBHc?si=zLGSZS_xZoYJQOSe"
-             target="_blank" class="action-btn details-btn"
-             title="Watch on YouTube">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
+      <div class="hero-tags">
+        <span class="hero-tag">Podcast Host</span>
+        <span class="hero-tag">News Editor</span>
+        <span class="hero-tag">Linguistics</span>
+        <span class="hero-tag">Digital Creator</span>
+        <span class="hero-tag">Board Member</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary-custom">
+          View Work
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contact" class="btn-secondary-custom">Get In Touch</a>
+      </div>
+      <div class="hero-location">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Walling, Syangja · Kathmandu, Nepal
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.youtube.com/@mohangurungpodcast" target="_blank">YouTube</a>
+        <a href="https://www.linkedin.com/in/mohan-gurung-16983725a/" target="_blank">LinkedIn</a>
+        <a href="https://x.com/mohantamoo" target="_blank">Twitter</a>
       </div>
     </div>
-    <div class="portfolio-content">
-      <div class="portfolio-meta">
-        <span class="portfolio-category">#folklore</span>
-        <span class="portfolio-year">2024</span>
-      </div>
-      <h3 class="portfolio-title">कलाकारको कला र कलाकारिताको सम्मान गरौं ! PURNAKALA BC II MOHANG GURUNG Podcast Ep:14</h3>
-      <p class="portfolio-description">
-        Saurya News Pvt. Ltd. द्वारा सञ्चालित MOHAN GURUNG Podcast मा प्रसारित सामाग्री अनाधिकृत रुपमा प्रयोग गर्न/ नगराउन अनुरोध छ । 
-        यदि अनाधिकृत रुपमा प्रयोग गरे गराइएको पाइएमा प्रतिलिपि अधिकार ऐन २०५९ तथा प्रतिलिपि सम्बन्धी आकर्षित ऐन अनुसार कार्वाही गरिने व्यहोरा जानकारी गराइन्छ । 
-      </p>
-    </div>
-  </div>
-</div>
-<!-- End Portfolio Item -->
+  </section>
 
-<!-- Card 7 – rd4OVfosTr8 -->
-<div class="col-lg-6 portfolio-item isotope-item filter-podcasts filter-social">
-  <div class="portfolio-card">
-    <div class="portfolio-image">
-      <a href="https://youtu.be/rd4OVfosTr8?si=LkYuR1raC5qpxVXM"
-         target="_blank" rel="noopener" title="Watch on YouTube">
-        <img src="https://img.youtube.com/vi/rd4OVfosTr8/maxresdefault.jpg"
-             class="img-fluid" alt="Podcast thumbnail" loading="lazy">
-      </a>
-      <div class="portfolio-overlay">
-        <div class="portfolio-actions">
-          <a href="https://img.youtube.com/vi/rd4OVfosTr8/maxresdefault.jpg"
-             class="glightbox action-btn preview-btn"
-             title="Episode Thumbnail">
-            <i class="bi bi-eye"></i>
-          </a>
-          <a href="https://youtu.be/rd4OVfosTr8?si=LkYuR1raC5qpxVXM"
-             target="_blank" class="action-btn details-btn"
-             title="Watch on YouTube">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-content">
-      <div class="portfolio-meta">
-        <span class="portfolio-category">#folklore</span>
-        <span class="portfolio-year">2024</span>
-      </div>
-      <h3 class="portfolio-title">शिव हमाललाई व्यापारमा घाटा, लोकसंगीतमा नाफा I SHIVA HAMAL I MOHAN GURUNG Podcast Ep: 11</h3>
-      <p class="portfolio-description">
-        Description: Title: शिव हमाललाई व्यापारमा घाटा, लोकसंगीतमा नाफा I SHIVA HAMAL I MOHAN GURUNG Podcast Ep: 11 #folklore
-      </p>
-    </div>
-  </div>
-</div>
-<!-- End Portfolio Item -->
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Portfolio Section -->
- 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>We’re just a call away.</p>
-      </div><!-- End Section Title -->
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5">
-
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="bi bi-chat-dots"></i>
-              </div>
-              <div class="info-content">
-                <h4>Let's Connect</h4>
-                <!-- <p>We're here to discuss your vision and explore how we can bring it to life together.</p> -->
-              </div>
-            </div>
-
-            <div class="contact-details">
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <i class="bi bi-envelope-open"></i>
-                </div>
-                <div class="detail-content">
-                  <span class="detail-label">Email us</span>
-                  <span class="detail-value">Mohan.807623@cdl.tu.edu.np</span>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <i class="bi bi-telephone-outbound"></i>
-                </div>
-                <div class="detail-content">
-                  <span class="detail-label">Call us</span>
-                  <span class="detail-value">+977 9856030928</span>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <i class="bi bi-geo-alt-fill"></i>
-                </div>
-                <div class="detail-content">
-                  <span class="detail-label">Visit </span>
-                  <span class="detail-value">Banasthali-16, Kathmandu, Nepal</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="form-wrapper">
-              <div class="form-header">
-                <h3>Send us a message</h3>
-              </div>
-
-              <form id="contact-form" >
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Full Name</label>
-                      <input type="text" name="from_name" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Email Address</label>
-                      <input type="email" name="from_email" required="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label>Subject</label>
-                  <input type="text" name="subject" required="">
-                </div>
-
-                <div class="form-group">
-                  <label for="projectMessage">Message</label>
-                  <textarea name="message" id="projectMessage" rows="5" required=""></textarea>
-                </div>
-
-                <!-- <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div> -->
-
-                <button type="submit" class="submit-btn">
-                  <span>Send Message</span>
-                  <i class="bi bi-arrow-right"></i>
-                </button>
-
-              </form>
-              <p id="status"></p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer light-background">
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
     <div class="container">
-      <h3 class="sitename">Mohan Gurung</h3>
-      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/mohantamoo?fbclid=IwY2xjawO3j89leHRuA2FlbQIxMABicmlkETFvbFhkWE8xeDhZZEJ1aERvc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhkkqhhkTT6ARBUyu411ohE5MHv-xz3QcYKwoFvhyTgSIxWnUJZGL5jmdMJX_aem_AYD5w4rj7ReQJYRyZjNFIw" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/mohan_tamuu" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="instagram.com/mohan_tamuu" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="www.tiktok.com/@mohantamoo" target="_blank"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.youtube.com/@mohangurungpodcast" target="_blank"><i class="bi bi-youtube"></i></a>
-        <!-- <a href=""><i class="bi bi-skype"></i></a> -->
-        <a href="https://www.linkedin.com/in/mohan-gurung-16983725a/"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>©</span> <strong class="px-1 sitename">Mohan Gurung</strong>&<a class="px-1" href="https://www.dumresabin.com.np/" target="_blank"><strong>dumresarkaar.</strong></a> <span>All Rights Reserved</span>
+      <p class="section-label fade-up">About</p>
+      <h2 class="section-heading fade-up">The person <em>behind the mic</em></h2>
+
+      <div class="about-grid">
+        <div class="about-image-wrap fade-up">
+          <img src="assets/img/person/mohan-grg-2.jpg" alt="Mohan Gurung">
+          <div class="about-badge">
+            <strong>8+</strong>
+            Years in Media & Research
+          </div>
         </div>
-        <!-- <div class="credits">
-          Designed by <a href="">BootstrapMade</a>
-        </div> -->
+
+        <div class="about-content">
+          <p class="about-lead fade-up">
+            Mohan Gurung is a media professional and visual storyteller who has worked as a news editor, reporter, podcast host, and communications trainer with national organizations across Nepal.
+          </p>
+          <p class="about-body fade-up">
+            He currently serves on the Advertisement Board Nepal and is an MPhil‑PhD research scholar at the Central Department of Linguistics, Tribhuvan University. His research explores how language, media, and public narratives shape social change — linking academic insight with practical storytelling in the field.
+          </p>
+
+          <div class="about-pillars fade-up">
+            <div class="pillar">
+              <span class="pillar-icon">🎙️</span>
+              <h4>Audio & Podcast</h4>
+              <p>Hosts deep-dive conversations on culture, folk music, and social discourse</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">📰</span>
+              <h4>Editorial Leadership</h4>
+              <p>Led newsrooms from reporter to Editor-in-Chief across multiple platforms</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🔬</span>
+              <h4>Linguistics Research</h4>
+              <p>MPhil–PhD scholar bridging language science with mass communication</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🏛️</span>
+              <h4>Public Policy</h4>
+              <p>Board member contributing to advertising regulation at the national level</p>
+            </div>
+          </div>
+
+          <blockquote class="about-quote fade-up">
+            "हरेक चुनौतीको सामना गर्ने बानी परेको छ। समस्याहरूसँग जुध्ने साहस बटुल्दै, र सोही साहसलाई ऊर्जामा रूपान्तरण गर्दै म आफ्नो दैनिकी चलाइरहेको छु।"
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <p class="section-label fade-up">Expertise</p>
+        <h2 class="section-heading fade-up">Skills &amp; <em>Focus Areas</em></h2>
+        <p class="section-sub fade-up">Blending linguistics, mass communication, public health, and digital media to craft impactful, research-driven narratives.</p>
+      </div>
+
+      <div class="skills-clusters fade-up">
+        <div class="skill-cluster">
+          <div class="cluster-icon">📝</div>
+          <h3 class="cluster-title">Communication & Editorial</h3>
+          <p class="cluster-sub">Writing, editing, and linguistic expertise honed across newsrooms</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Editorial Management</span>
+            <span class="skill-tag">News Reporting</span>
+            <span class="skill-tag">Field Journalism</span>
+            <span class="skill-tag">Academic Writing</span>
+            <span class="skill-tag">Copyediting</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <div class="cluster-icon">🎙️</div>
+          <h3 class="cluster-title">Digital Media & Content</h3>
+          <p class="cluster-sub">Podcasting, social media, and visual storytelling across platforms</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Podcast Hosting</span>
+            <span class="skill-tag">Video Production</span>
+            <span class="skill-tag">Content Strategy</span>
+            <span class="skill-tag">Social Media</span>
+            <span class="skill-tag">Digital Branding</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <div class="cluster-icon">🔬</div>
+          <h3 class="cluster-title">Research & Academia</h3>
+          <p class="cluster-sub">Linguistics scholarship and applied public health perspectives</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Sociolinguistics</span>
+            <span class="skill-tag">Research Methods</span>
+            <span class="skill-tag">Public Health</span>
+            <span class="skill-tag">Language Policy</span>
+            <span class="skill-tag">Discourse Analysis</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <div class="cluster-icon">🌿</div>
+          <h3 class="cluster-title">Focus: Nepali Culture</h3>
+          <p class="cluster-sub">Preserving and amplifying lok geet, culture, and community voices</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Folk Music</span>
+            <span class="skill-tag">Cultural Narrative</span>
+            <span class="skill-tag">Community Engagement</span>
+            <span class="skill-tag">Nepali Languages</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <div class="cluster-icon">👥</div>
+          <h3 class="cluster-title">Leadership & Training</h3>
+          <p class="cluster-sub">Managing teams, training journalists, and field supervision</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Communications Training</span>
+            <span class="skill-tag">Field Supervision</span>
+            <span class="skill-tag">Teaching</span>
+          </div>
+        </div>
+        <div class="skill-cluster">
+          <div class="cluster-icon">🏛️</div>
+          <h3 class="cluster-title">Policy & Governance</h3>
+          <p class="cluster-sub">Media regulation, human rights monitoring, and civic engagement</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Ad Board Policy</span>
+            <span class="skill-tag">Human Rights</span>
+            <span class="skill-tag">Municipal Governance</span>
+            <span class="skill-tag">INSEC Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-stats fade-up">
+        <div class="stat-item">
+          <span class="stat-number">8+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">16+</span>
+          <span class="stat-label">Podcast Episodes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Editorial Roles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Advanced Degrees</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="container">
+      <div class="exp-layout">
+        <div class="exp-sidebar">
+          <p class="section-label fade-up">Career</p>
+          <h2 class="section-heading fade-up">Professional <em>Journey</em></h2>
+          <p class="fade-up">Extensive experience across editorial leadership, reporting, digital content creation, and supervision roles in media, civil society, and local government across Nepal.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2023 – Present</span>
+            <h3 class="timeline-role">Podcast Presenter</h3>
+            <p class="timeline-org">Mohan Gurung Podcast</p>
+            <p class="timeline-desc">Hosts and produces podcasts focused on social issues, Nepali folk music (lok geet), language, and contemporary discourse — engaging diverse audiences through YouTube and digital platforms.</p>
+            <div class="timeline-chips">
+              <span class="timeline-chip">Digital Creator</span>
+              <span class="timeline-chip">Content Strategy</span>
+              <span class="timeline-chip">Audience Engagement</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Board Tenure</span>
+            <h3 class="timeline-role">Board Member</h3>
+            <p class="timeline-org">Advertisement Board Nepal</p>
+            <p class="timeline-desc">Contributes to policy, governance, and strategic decisions in advertising regulation and media-related initiatives at the national level.</p>
+            <div class="timeline-chips">
+              <span class="timeline-chip">Governance</span>
+              <span class="timeline-chip">Media Policy</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Editorial Leadership</span>
+            <h3 class="timeline-role">Editor-in-Chief</h3>
+            <p class="timeline-org">Mohan Gurung / मोहन गुरुङ · Mero Dristy</p>
+            <p class="timeline-desc">Led editorial direction, managed newsroom operations, and oversaw content standards for multi-platform media brands. Directed policy and coordinated reporting teams for in-depth social and political coverage.</p>
+            <div class="timeline-chips">
+              <span class="timeline-chip">Editorial Leadership</span>
+              <span class="timeline-chip">Team Management</span>
+              <span class="timeline-chip">Content Quality</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Sub-Editorial</span>
+            <h3 class="timeline-role">Editor · Sub-Editor</h3>
+            <p class="timeline-org">Akala Aawaj · Nepal Bahas</p>
+            <p class="timeline-desc">Edited news and feature content ensuring accuracy, clarity, and editorial ethics. Supported the editorial desk with content refinement, headline writing, and layout coordination for print and digital editions.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Field Journalism</span>
+            <h3 class="timeline-role">Reporter</h3>
+            <p class="timeline-org">Republica</p>
+            <p class="timeline-desc">Reported on local and national issues, conducting field visits, interviews, and fact-checking to develop accurate, impactful news stories.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Civil Society</span>
+            <h3 class="timeline-role">District Representative</h3>
+            <p class="timeline-org">INSEC</p>
+            <p class="timeline-desc">Monitored and documented human rights and social justice issues at the district level, coordinating with local stakeholders and civil society organizations.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Public Sector</span>
+            <h3 class="timeline-role">Supervisor</h3>
+            <p class="timeline-org">Waling Municipality</p>
+            <p class="timeline-desc">Supervised local-level activities and supported implementation and monitoring of municipal programs and community services.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">Education</span>
+            <h3 class="timeline-role">Assistant Teacher</h3>
+            <p class="timeline-org">Armadi English School</p>
+            <p class="timeline-desc">Taught and supported students in classroom activities, focusing on language, communication, and foundational academic skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label fade-up">Academia</p>
+      <h2 class="section-heading fade-up">Education &amp; <em>Qualifications</em></h2>
+      <p class="section-sub fade-up">Academic foundation in linguistics, mass communication, and public health — combining research depth with applied media practice.</p>
+
+      <div class="edu-grid">
+        <div class="edu-card featured fade-up">
+          <span class="edu-year">Ongoing · Research Scholar</span>
+          <h3 class="edu-degree">MPhil–PhD in Linguistics</h3>
+          <p class="edu-school">Central Department of Linguistics, Tribhuvan University</p>
+          <p class="edu-desc">Advanced research in linguistics with focus on language, society, and communication in the Nepali context. Bridging academic inquiry with media practice.</p>
+        </div>
+
+        <div class="edu-card fade-up">
+          <span class="edu-year">Completed</span>
+          <h3 class="edu-degree">Master of Public Health (MPH)</h3>
+          <p class="edu-school">Tribhuvan University</p>
+          <p class="edu-desc">Public health policy, research methods, and community health with a communication and development perspective.</p>
+        </div>
+
+        <div class="edu-card fade-up">
+          <span class="edu-year">Completed</span>
+          <h3 class="edu-degree">Mass Communication</h3>
+          <p class="edu-school">Purbanchal University</p>
+          <p class="edu-desc">Professional skills in journalism, media studies, and communication theory with hands-on newsroom exposure.</p>
+        </div>
+
+        <div class="edu-card fade-up">
+          <span class="edu-year">Ongoing / Completed</span>
+          <h3 class="edu-degree">Studies in Linguistics</h3>
+          <p class="edu-school">Tribhuvan University</p>
+          <p class="edu-desc">Language structure, sociolinguistics, and applied linguistics relevant to Nepali languages and communities.</p>
+        </div>
+
+        <div class="edu-card fade-up">
+          <span class="edu-year">Graduate</span>
+          <h3 class="edu-degree">Higher Secondary Education</h3>
+          <p class="edu-school">Waling Multiple Campus</p>
+          <p class="edu-desc">Social sciences and communication-related subjects forming the academic foundation.</p>
+        </div>
+
+        <div class="edu-card fade-up">
+          <span class="edu-year">Graduate</span>
+          <h3 class="edu-degree">School Education</h3>
+          <p class="edu-school">Shree Majhkot Higher Secondary School, Syangja</p>
+          <p class="edu-desc">Foundational education in language, social studies, and civic awareness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PORTFOLIO ═══ -->
+  <section id="portfolio">
+    <div class="container">
+      <p class="section-label fade-up">Work</p>
+      <h2 class="section-heading fade-up">Podcast <em>Episodes</em></h2>
+      <p class="section-sub fade-up">Conversations on Nepali folk music, culture, and social issues — published on YouTube and reaching audiences across Nepal and the diaspora.</p>
+
+      <div class="portfolio-grid">
+
+        <a href="https://youtu.be/UJhRj5_6R0E?si=hYggO70do8xPAl_A" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/UJhRj5_6R0E/maxresdefault.jpg" alt="Narayan Rayamajhi Episode" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode 01 · Lok Sangeet · 2024</p>
+            <h3 class="portfolio-title">नेपाली लोकसंगीतका धरोहर नारायण रायमाझी</h3>
+            <p class="portfolio-desc">Narayan Rayamajhi — leading figure of Nepali folklore and film, a master of original folk music dedicated his life to preserving Nepali cultural heritage.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://youtu.be/C2q2K3U6qOs?si=0nX9A35GqiMwvEdr" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/C2q2K3U6qOs/maxresdefault.jpg" alt="Shila Ale Episode" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode · Folk · 2024</p>
+            <h3 class="portfolio-title">गायिका शिला आलेको आँबुखैरेनीदेखि अमेरिकासम्मको यात्रा</h3>
+            <p class="portfolio-desc">Singer Sheela Ale's remarkable journey from Ambukhaireni all the way to America — a story of music, migration, and identity.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://youtu.be/1L5s60NZ5D0?si=l9ksiey5PFOfkeWJ" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/1L5s60NZ5D0/maxresdefault.jpg" alt="Khuman Adhikari Episode" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode 03 · Folk Artist · 2024</p>
+            <h3 class="portfolio-title">ह्वात्त आएर ह्वात्त जानेलाई भाइरल भनिन्छ — Khuman Adhikari</h3>
+            <p class="portfolio-desc">Khuman Adhikari — popular folk artist from Syangja who has dedicated his life to Nepali folk literature and music, with thousands of beloved songs.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://youtu.be/iZ6qQidloJ0?si=grdFRHWTbmHkwbcM" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/iZ6qQidloJ0/maxresdefault.jpg" alt="Raju Pariyar Manju BK" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode · Lok Dohori · 2024</p>
+            <h3 class="portfolio-title">स्वर सम्राट राजु परियार र ठाडो भाकाका गायिका मञ्जु बिकसँग</h3>
+            <p class="portfolio-desc">Raju Pariyar and Manju B.K. — two icons of folk and duet song — in conversation about lok geet, lok dohori, and the art of authentic Nepali voice.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://youtu.be/SV97vZkXyv0?si=raGkrNfouQ97kC7m" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/SV97vZkXyv0/maxresdefault.jpg" alt="Badri Pangeni Episode" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode 12 · Folklore · 2024</p>
+            <h3 class="portfolio-title">लोकगीत र लोकदोहोरी दाजुभाई हुन् — Badri Pangeni</h3>
+            <p class="portfolio-desc">Badri Pangeni on the brotherhood between lok geet and lok dohori — exploring how Nepali folk traditions hold communities together.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://youtu.be/rd4OVfosTr8?si=LkYuR1raC5qpxVXM" target="_blank" rel="noopener" class="portfolio-card fade-up">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/rd4OVfosTr8/maxresdefault.jpg" alt="Shiva Hamal Episode" loading="lazy">
+            <div class="portfolio-thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-cat">Episode 11 · Folk Music · 2024</p>
+            <h3 class="portfolio-title">शिव हमाललाई व्यापारमा घाटा, लोकसंगीतमा नाफा — Shiva Hamal</h3>
+            <p class="portfolio-desc">Shiva Hamal on trading business losses for folk music gains — a candid conversation about passion, purpose, and the Nepali creative spirit.</p>
+            <div class="portfolio-link-row">
+              Watch on YouTube
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="yt-cta fade-up">
+        <a href="https://www.youtube.com/@mohangurungpodcast" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--cream)"/></svg>
+          View All Episodes on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ NOW ═══ -->
+  <section id="now">
+    <div class="container">
+      <p class="section-label fade-up">Currently</p>
+      <h2 class="section-heading fade-up">What I'm doing <em>right now</em></h2>
+
+      <div class="now-grid">
+
+        <!-- Featured card — main focus -->
+        <div class="now-card featured fade-up">
+          <div class="now-card-icon large">🎙️</div>
+          <div>
+            <div class="now-pulse">
+              <div class="now-dot"></div>
+              <span class="now-dot-label">Active</span>
+            </div>
+            <h3>Recording new podcast episodes on Nepali folk music &amp; cultural identity</h3>
+            <p>Continuing the Mohan Gurung Podcast series — hosting conversations with folk artists, musicians, and cultural figures who are shaping and preserving Nepal's living oral traditions.</p>
+            <span class="now-tag">Mohan Gurung Podcast · YouTube</span>
+          </div>
+        </div>
+
+        <!-- Card 2 — Research -->
+        <div class="now-card fade-up">
+          <div class="now-card-icon">🔬</div>
+          <div class="now-pulse" style="margin-top:1rem;">
+            <div class="now-dot"></div>
+            <span class="now-dot-label">In Progress</span>
+          </div>
+          <h3>MPhil–PhD Research in Linguistics</h3>
+          <p>Advancing doctoral research at the Central Department of Linguistics, Tribhuvan University — exploring the intersection of language, media, and public narrative in Nepal.</p>
+          <span class="now-tag">Tribhuvan University</span>
+        </div>
+
+        <!-- Card 3 — Board -->
+        <div class="now-card fade-up">
+          <div class="now-card-icon">🏛️</div>
+          <div class="now-pulse" style="margin-top:1rem;">
+            <div class="now-dot"></div>
+            <span class="now-dot-label">Ongoing</span>
+          </div>
+          <h3>Serving on the Advertisement Board Nepal</h3>
+          <p>Contributing to national-level media regulation policy, governance decisions, and strategic frameworks for the advertising and communications sector.</p>
+          <span class="now-tag">Advertisement Board Nepal</span>
+        </div>
+
+        <!-- Card 4 — Reading / thinking -->
+        <div class="now-card fade-up">
+          <div class="now-card-icon">📖</div>
+          <div class="now-pulse" style="margin-top:1rem;">
+            <div class="now-dot"></div>
+            <span class="now-dot-label">Exploring</span>
+          </div>
+          <h3>Deepening study of sociolinguistics &amp; Nepali language policy</h3>
+          <p>Reading widely at the crossroads of discourse analysis, media studies, and applied linguistics — feeding both research and editorial work with fresh perspectives.</p>
+          <span class="now-tag">Research &amp; Reading</span>
+        </div>
+
+      </div>
+
+      <div class="now-footer-note fade-up">
+        <p>"This is a living snapshot — updated as the work evolves."</p>
+        <span>Last updated · March 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-heading">Let's <em>connect</em></h2>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p>Whether you're looking to collaborate on a podcast, editorial project, or research initiative — I'd love to hear from you.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Email</span>
+              <a href="/cdn-cgi/l/email-protection#216c4e49404f0f1911161713126142454d0f55540f4445540f4f51"><span class="__cf_email__" data-cfemail="074a686f6669293f37303135344764636b29737229626372296977">[email&#160;protected]</span></a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Phone</span>
+              <a href="tel:+9779856030928">+977 9856030928</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Location</span>
+              <p>Banasthali-16, Kathmandu, Nepal</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.youtube.com/@mohangurungpodcast" target="_blank" class="contact-social" title="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohan-gurung-16983725a/" target="_blank" class="contact-social" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://x.com/mohantamoo" target="_blank" class="contact-social" title="Twitter/X">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/mohan_tamuu" target="_blank" class="contact-social" title="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="from_name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="from_email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="What's this about?" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </button>
+          <p id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Mohan Gurung</span>
+        <span class="footer-copy">© 2025 · Designed with <a href="https://www.dumresabin.com.np/" target="_blank">dumresarkaar</a></span>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
+  <!-- EmailJS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="assets/js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init({
-      publicKey: "Isv9ikSeVeWQbUYEe", // from EmailJS dashboard
-    });
-  })();
-</script>
-<script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("status");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    status.textContent = "Sending...";
-
-    emailjs
-      .sendForm("service_mi7zgsv", "template_nbuog3g", "#contact-form")
-      .then(
-        function () {
-          status.textContent = "Message sent successfully!";
-          form.reset();
-        },
-        function (error) {
-          console.error("FAILED...", error);
-          status.textContent = "Failed to send. Please try again.";
-        }
-      );
-  });
-</script>
 </body>
-
 </html>
