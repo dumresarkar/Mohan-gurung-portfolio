@@ -605,6 +605,51 @@
       color: var(--muted); border-radius: 2px;
     }
 
+    .timeline-story-links {
+      margin-top: 0.9rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .timeline-story-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      display: inline-block;
+      margin-right: 0.2rem;
+    }
+    .timeline-story-pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+      text-decoration: none;
+      background: var(--sand);
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+    .timeline-story-pill:hover {
+      background: var(--terracotta);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+    .timeline-story-pill.view-all {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--warm-brown);
+    }
+    .timeline-story-pill.view-all:hover {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+
     /* ═══════════════════════════════
        EDUCATION SECTION
     ═══════════════════════════════ */
@@ -776,6 +821,182 @@
     .yt-cta svg {
       width: 18px; height: 18px;
       fill: currentColor;
+    }
+
+    /* ─── WORK SUBSECTIONS & ARTICLES GRID ─── */
+    .portfolio-sub-divider {
+      margin: 4.5rem 0 3.5rem;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+
+    .portfolio-sub-head {
+      margin-bottom: 2rem;
+    }
+    .portfolio-sub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.6rem;
+    }
+    .portfolio-sub-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+    .portfolio-sub-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+    .portfolio-sub-desc {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .article-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 1.75rem 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .article-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--terracotta);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--sand);
+      box-shadow: 0 10px 24px rgba(28,25,23,0.06);
+    }
+    .article-card:hover::before {
+      opacity: 1;
+    }
+
+    .article-card.featured-span {
+      grid-column: 1 / -1;
+      background: #FAF8F5;
+      border-left: 3px solid var(--terracotta);
+    }
+    .article-card.featured-span::before {
+      display: none;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .article-outlet {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+    }
+    .article-outlet.republica {
+      background: rgba(194,113,79,0.12);
+      color: var(--terracotta-dark);
+    }
+    .article-outlet.ratopati {
+      background: rgba(168,44,44,0.12);
+      color: #A82C2C;
+    }
+    .article-topic {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 0.65rem;
+    }
+    .article-desc {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+      flex-grow: 1;
+    }
+    .article-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+    }
+    .article-author {
+      color: var(--muted);
+      font-style: italic;
+      font-family: 'Crimson Pro', serif;
+      font-size: 0.95rem;
+    }
+    .article-read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--warm-brown);
+      font-size: 0.72rem;
+      transition: color 0.2s;
+    }
+    .article-card:hover .article-read-btn {
+      color: var(--terracotta);
+    }
+    .article-read-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      transition: transform 0.2s;
+    }
+    .article-card:hover .article-read-btn svg {
+      transform: translate(3px, -3px);
+    }
+
+    @media (max-width: 860px) {
+      .articles-grid { grid-template-columns: 1fr; }
+      .article-card.featured-span { grid-column: auto; }
     }
 
     /* ═══════════════════════════════
